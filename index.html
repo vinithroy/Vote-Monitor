@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Monitor Election</title>
+  <style>
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    header p {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body style="margin: 0">
+  <header>
+    <h1>Class Monitor</h1>
+    <p>Total Votes: <span id="totalVotes">0</span></p>
+  </header>
+
+  <form id="votingForm">
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" id="name" required /><br /><br />
+    <label for="candidate">Choose your candidate:</label>
+    <select name="candidate" id="candidate" required>
+      <option value="" disabled selected>Select candidate</option>
+      <option value="Karthik">Karthik</option>
+      <option value="Lloyd">Lloyd</option>
+      <option value="Valenteen">Valenteen</option>
+    </select><br /><br />
+    <button type="submit">Vote</button>
+  </form>
+
+  <h2>Candidates</h2>
+  <div id="candidatesList"></div>
+
+  <h2>Votes Tally</h2>
+  <div id="votesTally"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
